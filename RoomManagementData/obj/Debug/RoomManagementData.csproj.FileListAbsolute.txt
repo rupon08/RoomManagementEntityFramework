@@ -1,0 +1,1 @@
+E:\Projects\RoomManagementEntityFramework\RoomManagementData\obj\Debug\ResolveAssemblyReference.cache

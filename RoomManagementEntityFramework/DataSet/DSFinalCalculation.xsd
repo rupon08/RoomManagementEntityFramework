@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSFinalCalculation" targetNamespace="http://tempuri.org/DSFinalCalculation.xsd" xmlns:mstns="http://tempuri.org/DSFinalCalculation.xsd" xmlns="http://tempuri.org/DSFinalCalculation.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RoomManagementNewConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RoomManagementNewConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RoomManagementEntityFramework.Properties.Settings.GlobalReference.Default.RoomManagementNewConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Qry_DailyMarketEntryTableAdapter" GeneratorDataComponentClassName="Qry_DailyMarketEntryTableAdapter" Name="Qry_DailyMarketEntry" UserDataComponentName="Qry_DailyMarketEntryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RoomManagementNewConnectionString (Settings)" DbObjectName="RoomManagementNew.dbo.Qry_DailyMarketEntry" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TotalMarket, EntryDate, PersonName, Name, rowID FROM dbo.Qry_DailyMarketEntry</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TotalMarket" DataSetColumn="TotalMarket" />
+              <Mapping SourceColumn="EntryDate" DataSetColumn="EntryDate" />
+              <Mapping SourceColumn="PersonName" DataSetColumn="PersonName" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="rowID" DataSetColumn="rowID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSFinalCalculation" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSFinalCalculation" msprop:Generator_UserDSName="DSFinalCalculation">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Qry_DailyMarketEntry" msprop:Generator_TableClassName="Qry_DailyMarketEntryDataTable" msprop:Generator_TableVarName="tableQry_DailyMarketEntry" msprop:Generator_TablePropName="Qry_DailyMarketEntry" msprop:Generator_RowDeletingName="Qry_DailyMarketEntryRowDeleting" msprop:Generator_UserTableName="Qry_DailyMarketEntry" msprop:Generator_RowChangingName="Qry_DailyMarketEntryRowChanging" msprop:Generator_RowEvHandlerName="Qry_DailyMarketEntryRowChangeEventHandler" msprop:Generator_RowDeletedName="Qry_DailyMarketEntryRowDeleted" msprop:Generator_RowEvArgName="Qry_DailyMarketEntryRowChangeEvent" msprop:Generator_RowChangedName="Qry_DailyMarketEntryRowChanged" msprop:Generator_RowClassName="Qry_DailyMarketEntryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TotalMarket" msprop:Generator_ColumnVarNameInTable="columnTotalMarket" msprop:Generator_ColumnPropNameInRow="TotalMarket" msprop:Generator_ColumnPropNameInTable="TotalMarketColumn" msprop:Generator_UserColumnName="TotalMarket" type="xs:double" minOccurs="0" />
+              <xs:element name="EntryDate" msprop:Generator_ColumnVarNameInTable="columnEntryDate" msprop:Generator_ColumnPropNameInRow="EntryDate" msprop:Generator_ColumnPropNameInTable="EntryDateColumn" msprop:Generator_UserColumnName="EntryDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PersonName" msprop:Generator_ColumnVarNameInTable="columnPersonName" msprop:Generator_ColumnPropNameInRow="PersonName" msprop:Generator_ColumnPropNameInTable="PersonNameColumn" msprop:Generator_UserColumnName="PersonName" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rowID" msprop:Generator_ColumnVarNameInTable="columnrowID" msprop:Generator_ColumnPropNameInRow="rowID" msprop:Generator_ColumnPropNameInTable="rowIDColumn" msprop:Generator_UserColumnName="rowID" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Qry_DailyMarketEntry" />
+      <xs:field xpath="mstns:rowID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

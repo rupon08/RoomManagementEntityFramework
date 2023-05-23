@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RoomManagementNewModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RoomManagementNewModelStoreContainer">
+          <EntitySet Name="Tbl_cityMaster" EntityType="RoomManagementNewModel.Store.Tbl_cityMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_CountryMaster" EntityType="RoomManagementNewModel.Store.Tbl_CountryMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_DailyMarketEntry" EntityType="RoomManagementNewModel.Store.Tbl_DailyMarketEntry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_DailyMealEntry" EntityType="RoomManagementNewModel.Store.Tbl_DailyMealEntry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_DepositDetailsEntry" EntityType="RoomManagementNewModel.Store.Tbl_DepositDetailsEntry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_DepositMaster" EntityType="RoomManagementNewModel.Store.Tbl_DepositMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_ExpensesMst" EntityType="RoomManagementNewModel.Store.Tbl_ExpensesMst" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_ExtraExpensesDtlsEntry" EntityType="RoomManagementNewModel.Store.Tbl_ExtraExpensesDtlsEntry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_Login" EntityType="RoomManagementNewModel.Store.Tbl_Login" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_maritalStatusMaster" EntityType="RoomManagementNewModel.Store.Tbl_maritalStatusMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_PersonalIncomeExpensesEntry" EntityType="RoomManagementNewModel.Store.Tbl_PersonalIncomeExpensesEntry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_PersonDetailsEntry" EntityType="RoomManagementNewModel.Store.Tbl_PersonDetailsEntry" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_PersonPhoto" EntityType="RoomManagementNewModel.Store.Tbl_PersonPhoto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_professionMaster" EntityType="RoomManagementNewModel.Store.Tbl_professionMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tbl_qualificationMaster" EntityType="RoomManagementNewModel.Store.Tbl_qualificationMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Qry_CityMaster" EntityType="RoomManagementNewModel.Store.Qry_CityMaster" store:Type="Views" store:Schema="dbo" store:Name="Qry_CityMaster">
+            <DefiningQuery>SELECT 
+      [Qry_CityMaster].[countryName] AS [countryName], 
+      [Qry_CityMaster].[cityCode] AS [cityCode], 
+      [Qry_CityMaster].[cityName] AS [cityName], 
+      [Qry_CityMaster].[zipCode] AS [zipCode], 
+      [Qry_CityMaster].[countryCode] AS [countryCode]
+      FROM [dbo].[Qry_CityMaster] AS [Qry_CityMaster]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Qry_DailyMarketEntry" EntityType="RoomManagementNewModel.Store.Qry_DailyMarketEntry" store:Type="Views" store:Schema="dbo" store:Name="Qry_DailyMarketEntry">
+            <DefiningQuery>SELECT 
+      [Qry_DailyMarketEntry].[TotalMarket] AS [TotalMarket], 
+      [Qry_DailyMarketEntry].[EntryDate] AS [EntryDate], 
+      [Qry_DailyMarketEntry].[PersonName] AS [PersonName], 
+      [Qry_DailyMarketEntry].[Name] AS [Name], 
+      [Qry_DailyMarketEntry].[rowID] AS [rowID], 
+      [Qry_DailyMarketEntry].[Description] AS [Description]
+      FROM [dbo].[Qry_DailyMarketEntry] AS [Qry_DailyMarketEntry]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Qry_DailyMealEntry" EntityType="RoomManagementNewModel.Store.Qry_DailyMealEntry" store:Type="Views" store:Schema="dbo" store:Name="Qry_DailyMealEntry">
+            <DefiningQuery>SELECT 
+      [Qry_DailyMealEntry].[PersonID] AS [PersonID], 
+      [Qry_DailyMealEntry].[Name] AS [Name], 
+      [Qry_DailyMealEntry].[MealNo] AS [MealNo], 
+      [Qry_DailyMealEntry].[EntryDate] AS [EntryDate], 
+      [Qry_DailyMealEntry].[rowID] AS [rowID], 
+      [Qry_DailyMealEntry].[Description] AS [Description]
+      FROM [dbo].[Qry_DailyMealEntry] AS [Qry_DailyMealEntry]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Qry_DepositEntry" EntityType="RoomManagementNewModel.Store.Qry_DepositEntry" store:Type="Views" store:Schema="dbo" store:Name="Qry_DepositEntry">
+            <DefiningQuery>SELECT 
+      [Qry_DepositEntry].[ItemID] AS [ItemID], 
+      [Qry_DepositEntry].[ItemName] AS [ItemName], 
+      [Qry_DepositEntry].[TotalYear] AS [TotalYear], 
+      [Qry_DepositEntry].[rowID] AS [rowID], 
+      [Qry_DepositEntry].[PersonID] AS [PersonID], 
+      [Qry_DepositEntry].[Amount] AS [Amount], 
+      [Qry_DepositEntry].[EntryDate] AS [EntryDate]
+      FROM [dbo].[Qry_DepositEntry] AS [Qry_DepositEntry]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Qry_ExtraExpensesDtlsEntry" EntityType="RoomManagementNewModel.Store.Qry_ExtraExpensesDtlsEntry" store:Type="Views" store:Schema="dbo" store:Name="Qry_ExtraExpensesDtlsEntry">
+            <DefiningQuery>SELECT 
+      [Qry_ExtraExpensesDtlsEntry].[rowID] AS [rowID], 
+      [Qry_ExtraExpensesDtlsEntry].[ItemName] AS [ItemName], 
+      [Qry_ExtraExpensesDtlsEntry].[entryDate] AS [entryDate], 
+      [Qry_ExtraExpensesDtlsEntry].[expAmt] AS [expAmt], 
+      [Qry_ExtraExpensesDtlsEntry].[ExtraDetailRowID] AS [ExtraDetailRowID], 
+      [Qry_ExtraExpensesDtlsEntry].[IsExpenses] AS [IsExpenses], 
+      [Qry_ExtraExpensesDtlsEntry].[IsUtilities] AS [IsUtilities], 
+      [Qry_ExtraExpensesDtlsEntry].[Description] AS [Description], 
+      [Qry_ExtraExpensesDtlsEntry].[IsExtratExpenses] AS [IsExtratExpenses], 
+      [Qry_ExtraExpensesDtlsEntry].[expID] AS [expID], 
+      [Qry_ExtraExpensesDtlsEntry].[PersonName] AS [PersonName], 
+      [Qry_ExtraExpensesDtlsEntry].[Name] AS [Name]
+      FROM [dbo].[Qry_ExtraExpensesDtlsEntry] AS [Qry_ExtraExpensesDtlsEntry]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Qry_PersonalIncomeExpensesEntry" EntityType="RoomManagementNewModel.Store.Qry_PersonalIncomeExpensesEntry" store:Type="Views" store:Schema="dbo" store:Name="Qry_PersonalIncomeExpensesEntry">
+            <DefiningQuery>SELECT 
+      [Qry_PersonalIncomeExpensesEntry].[rowID] AS [rowID], 
+      [Qry_PersonalIncomeExpensesEntry].[PersonID] AS [PersonID], 
+      [Qry_PersonalIncomeExpensesEntry].[Amount] AS [Amount], 
+      [Qry_PersonalIncomeExpensesEntry].[EntryDate] AS [EntryDate], 
+      [Qry_PersonalIncomeExpensesEntry].[ItemID] AS [ItemID], 
+      [Qry_PersonalIncomeExpensesEntry].[ItemName] AS [ItemName], 
+      [Qry_PersonalIncomeExpensesEntry].[Name] AS [Name], 
+      [Qry_PersonalIncomeExpensesEntry].[FatherName] AS [FatherName], 
+      [Qry_PersonalIncomeExpensesEntry].[MotherName] AS [MotherName], 
+      [Qry_PersonalIncomeExpensesEntry].[IsActive] AS [IsActive], 
+      [Qry_PersonalIncomeExpensesEntry].[IsPersonalIncomeExpenses] AS [IsPersonalIncomeExpenses], 
+      [Qry_PersonalIncomeExpensesEntry].[IsExpenses] AS [IsExpenses], 
+      [Qry_PersonalIncomeExpensesEntry].[IsUtilities] AS [IsUtilities], 
+      [Qry_PersonalIncomeExpensesEntry].[Description] AS [Description]
+      FROM [dbo].[Qry_PersonalIncomeExpensesEntry] AS [Qry_PersonalIncomeExpensesEntry]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Tbl_Login_Tbl_Login" Association="RoomManagementNewModel.Store.FK_Tbl_Login_Tbl_Login">
+            <End Role="Tbl_Login" EntitySet="Tbl_Login" />
+            <End Role="Tbl_Login1" EntitySet="Tbl_Login" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Tbl_cityMaster">
+          <Key>
+            <PropertyRef Name="cityCode" />
+          </Key>
+          <Property Name="cityCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cityName" Type="nvarchar" MaxLength="50" />
+          <Property Name="zipCode" Type="int" />
+          <Property Name="countryCode" Type="int" />
+          <Property Name="createDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_CountryMaster">
+          <Key>
+            <PropertyRef Name="countryCode" />
+          </Key>
+          <Property Name="countryCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="countryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="createDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_DailyMarketEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PersonName" Type="int" Nullable="false" />
+          <Property Name="TotalMarket" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="800" />
+          <Property Name="LastUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_DailyMealEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PersonID" Type="int" />
+          <Property Name="MealNo" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="LastUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_DepositDetailsEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PersonID" Type="int" />
+          <Property Name="ItemID" Type="int" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_DepositMaster">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalYear" Type="int" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="Identification" Type="nchar" MaxLength="1" />
+          <Property Name="ItemNo" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Tbl_ExpensesMst">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsExpenses" Type="bit" />
+          <Property Name="IsUtilities" Type="bit" />
+          <Property Name="IsExtratExpenses" Type="bit" />
+          <Property Name="LastUpdate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="Tbl_ExtraExpensesDtlsEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PersonName" Type="int" />
+          <Property Name="expID" Type="bigint" />
+          <Property Name="expAmt" Type="bigint" />
+          <Property Name="entryDate" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="LastUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_Login">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="uid" Type="nvarchar" MaxLength="50" />
+          <Property Name="upwd" Type="nvarchar" MaxLength="50" />
+          <Property Name="createDate" Type="datetime" />
+          <Property Name="uname" Type="nvarchar" MaxLength="50" />
+          <Property Name="userType" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tbl_maritalStatusMaster">
+          <Key>
+            <PropertyRef Name="marialCode" />
+          </Key>
+          <Property Name="marialCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="maritalName" Type="nvarchar" MaxLength="50" />
+          <Property Name="createDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_PersonalIncomeExpensesEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PersonID" Type="int" />
+          <Property Name="ItemID" Type="int" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="LastUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_PersonDetailsEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Qualification" Type="int" />
+          <Property Name="Profession" Type="int" />
+          <Property Name="MaritalStatus" Type="int" />
+          <Property Name="DOB" Type="datetime" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="bigint" />
+          <Property Name="ZipCode" Type="bigint" />
+          <Property Name="Country" Type="bigint" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsPersonalIncomeExpenses" Type="bit" />
+        </EntityType>
+        <EntityType Name="Tbl_PersonPhoto">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PersonID" Type="bigint" />
+          <Property Name="PersonPhoto" Type="varchar" MaxLength="200" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="LastUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_professionMaster">
+          <Key>
+            <PropertyRef Name="professionCode" />
+          </Key>
+          <Property Name="professionCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="professionName" Type="varchar" MaxLength="50" />
+          <Property Name="createDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Tbl_qualificationMaster">
+          <Key>
+            <PropertyRef Name="qualificationCode" />
+          </Key>
+          <Property Name="qualificationCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="qualificationName" Type="nvarchar" MaxLength="50" />
+          <Property Name="createDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_CityMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Qry_CityMaster">
+          <Key>
+            <PropertyRef Name="cityCode" />
+          </Key>
+          <Property Name="countryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="cityCode" Type="int" Nullable="false" />
+          <Property Name="cityName" Type="nvarchar" MaxLength="50" />
+          <Property Name="zipCode" Type="int" />
+          <Property Name="countryCode" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_DailyMarketEntry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Qry_DailyMarketEntry">
+          <Key>
+            <PropertyRef Name="PersonName" />
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="TotalMarket" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="PersonName" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="rowID" Type="bigint" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_DailyMealEntry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Qry_DailyMealEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="PersonID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="MealNo" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="rowID" Type="bigint" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_DepositEntry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Qry_DepositEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="ItemID" Type="int" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalYear" Type="int" />
+          <Property Name="rowID" Type="bigint" Nullable="false" />
+          <Property Name="PersonID" Type="int" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_ExtraExpensesDtlsEntry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Qry_ExtraExpensesDtlsEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+            <PropertyRef Name="ExtraDetailRowID" />
+          </Key>
+          <Property Name="rowID" Type="bigint" Nullable="false" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+          <Property Name="entryDate" Type="datetime" />
+          <Property Name="expAmt" Type="bigint" />
+          <Property Name="ExtraDetailRowID" Type="bigint" Nullable="false" />
+          <Property Name="IsExpenses" Type="bit" />
+          <Property Name="IsUtilities" Type="bit" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="IsExtratExpenses" Type="bit" />
+          <Property Name="expID" Type="bigint" />
+          <Property Name="PersonName" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_PersonalIncomeExpensesEntry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Qry_PersonalIncomeExpensesEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Name="rowID" Type="int" Nullable="false" />
+          <Property Name="PersonID" Type="int" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="EntryDate" Type="datetime" />
+          <Property Name="ItemID" Type="int" />
+          <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsPersonalIncomeExpenses" Type="bit" />
+          <Property Name="IsExpenses" Type="bit" />
+          <Property Name="IsUtilities" Type="bit" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <Association Name="FK_Tbl_Login_Tbl_Login">
+          <End Role="Tbl_Login" Type="RoomManagementNewModel.Store.Tbl_Login" Multiplicity="1" />
+          <End Role="Tbl_Login1" Type="RoomManagementNewModel.Store.Tbl_Login" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Login">
+              <PropertyRef Name="rowID" />
+            </Principal>
+            <Dependent Role="Tbl_Login1">
+              <PropertyRef Name="rowID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RoomManagementNewModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="RoomManagementNewEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tbl_cityMaster" EntityType="RoomManagementNewModel.Tbl_cityMaster" />
+          <EntitySet Name="Tbl_CountryMaster" EntityType="RoomManagementNewModel.Tbl_CountryMaster" />
+          <EntitySet Name="Tbl_maritalStatusMaster" EntityType="RoomManagementNewModel.Tbl_maritalStatusMaster" />
+          <EntitySet Name="Tbl_professionMaster" EntityType="RoomManagementNewModel.Tbl_professionMaster" />
+          <EntitySet Name="Tbl_qualificationMaster" EntityType="RoomManagementNewModel.Tbl_qualificationMaster" />
+          <EntitySet Name="Qry_CityMaster" EntityType="RoomManagementNewModel.Qry_CityMaster" />
+          <EntitySet Name="Tbl_DepositDetailsEntry" EntityType="RoomManagementNewModel.Tbl_DepositDetailsEntry" />
+          <EntitySet Name="Qry_DepositEntry" EntityType="RoomManagementNewModel.Qry_DepositEntry" />
+          <EntitySet Name="Qry_PersonalIncomeExpensesEntry" EntityType="RoomManagementNewModel.Qry_PersonalIncomeExpensesEntry" />
+          <EntitySet Name="Tbl_ExpensesMst" EntityType="RoomManagementNewModel.Tbl_ExpensesMst" />
+          <EntitySet Name="Tbl_Login" EntityType="RoomManagementNewModel.Tbl_Login" />
+          <AssociationSet Name="FK_Tbl_Login_Tbl_Login" Association="RoomManagementNewModel.FK_Tbl_Login_Tbl_Login">
+            <End Role="Tbl_Login" EntitySet="Tbl_Login" />
+            <End Role="Tbl_Login1" EntitySet="Tbl_Login" />
+          </AssociationSet>
+          <EntitySet Name="Tbl_PersonDetailsEntry" EntityType="RoomManagementNewModel.Tbl_PersonDetailsEntry" />
+          <EntitySet Name="Tbl_PersonPhoto" EntityType="RoomManagementNewModel.Tbl_PersonPhoto" />
+          <EntitySet Name="Tbl_PersonalIncomeExpensesEntry" EntityType="RoomManagementNewModel.Tbl_PersonalIncomeExpensesEntry" />
+          <EntitySet Name="Tbl_DailyMarketEntry" EntityType="RoomManagementNewModel.Tbl_DailyMarketEntry" />
+          <EntitySet Name="Tbl_DailyMealEntry" EntityType="RoomManagementNewModel.Tbl_DailyMealEntry" />
+          <EntitySet Name="Qry_DailyMarketEntry" EntityType="RoomManagementNewModel.Qry_DailyMarketEntry" />
+          <EntitySet Name="Qry_DailyMealEntry" EntityType="RoomManagementNewModel.Qry_DailyMealEntry" />
+          <EntitySet Name="Tbl_ExtraExpensesDtlsEntry" EntityType="RoomManagementNewModel.Tbl_ExtraExpensesDtlsEntry" />
+          <EntitySet Name="Qry_ExtraExpensesDtlsEntry" EntityType="RoomManagementNewModel.Qry_ExtraExpensesDtlsEntry" />
+          <EntitySet Name="Tbl_DepositMaster" EntityType="RoomManagementNewModel.Tbl_DepositMaster" />
+        </EntityContainer>
+        <EntityType Name="Tbl_cityMaster">
+          <Key>
+            <PropertyRef Name="cityCode" />
+          </Key>
+          <Property Type="Int32" Name="cityCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="cityName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="zipCode" />
+          <Property Type="Int32" Name="countryCode" />
+          <Property Type="DateTime" Name="createDate" />
+        </EntityType>
+        <EntityType Name="Tbl_CountryMaster">
+          <Key>
+            <PropertyRef Name="countryCode" />
+          </Key>
+          <Property Type="Int32" Name="countryCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="countryName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="createDate" />
+        </EntityType>
+        <EntityType Name="Tbl_maritalStatusMaster">
+          <Key>
+            <PropertyRef Name="marialCode" />
+          </Key>
+          <Property Type="Int32" Name="marialCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="maritalName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="createDate" />
+        </EntityType>
+        <EntityType Name="Tbl_professionMaster">
+          <Key>
+            <PropertyRef Name="professionCode" />
+          </Key>
+          <Property Type="Int32" Name="professionCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="professionName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="createDate" />
+        </EntityType>
+        <EntityType Name="Tbl_qualificationMaster">
+          <Key>
+            <PropertyRef Name="qualificationCode" />
+          </Key>
+          <Property Type="Int32" Name="qualificationCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="qualificationName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="createDate" />
+        </EntityType>
+        <EntityType Name="Qry_CityMaster">
+          <Key>
+            <PropertyRef Name="cityCode" />
+          </Key>
+          <Property Type="String" Name="countryName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="cityCode" Nullable="false" />
+          <Property Type="String" Name="cityName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="zipCode" />
+          <Property Type="Int32" Name="countryCode" />
+        </EntityType>
+        <EntityType Name="Tbl_DepositDetailsEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PersonID" />
+          <Property Type="Int32" Name="ItemID" />
+          <Property Type="Double" Name="Amount" />
+          <Property Type="DateTime" Name="EntryDate" />
+        </EntityType>
+        <EntityType Name="Qry_DepositEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int32" Name="ItemID" />
+          <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="TotalYear" />
+          <Property Type="Int64" Name="rowID" Nullable="false" />
+          <Property Type="Int32" Name="PersonID" />
+          <Property Type="Double" Name="Amount" />
+          <Property Type="DateTime" Name="EntryDate" />
+        </EntityType>
+        <EntityType Name="Qry_PersonalIncomeExpensesEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int32" Name="rowID" Nullable="false" />
+          <Property Type="Int32" Name="PersonID" />
+          <Property Type="Double" Name="Amount" />
+          <Property Type="DateTime" Name="EntryDate" />
+          <Property Type="Int32" Name="ItemID" />
+          <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="Boolean" Name="IsPersonalIncomeExpenses" />
+          <Property Type="Boolean" Name="IsExpenses" />
+          <Property Type="Boolean" Name="IsUtilities" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Tbl_ExpensesMst">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsExpenses" />
+          <Property Type="Boolean" Name="IsUtilities" />
+          <Property Type="Boolean" Name="IsExtratExpenses" />
+          <Property Type="DateTime" Name="LastUpdate" />
+          <Property Type="Boolean" Name="IsActive" />
+        </EntityType>
+        <EntityType Name="Tbl_Login">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="uid" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="upwd" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="createDate" />
+          <Property Type="String" Name="uname" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="userType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tbl_Login1" Relationship="RoomManagementNewModel.FK_Tbl_Login_Tbl_Login" FromRole="Tbl_Login" ToRole="Tbl_Login1" />
+          <NavigationProperty Name="Tbl_Login2" Relationship="RoomManagementNewModel.FK_Tbl_Login_Tbl_Login" FromRole="Tbl_Login1" ToRole="Tbl_Login" />
+        </EntityType>
+        <Association Name="FK_Tbl_Login_Tbl_Login">
+          <End Type="RoomManagementNewModel.Tbl_Login" Role="Tbl_Login" Multiplicity="1" />
+          <End Type="RoomManagementNewModel.Tbl_Login" Role="Tbl_Login1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Login">
+              <PropertyRef Name="rowID" />
+            </Principal>
+            <Dependent Role="Tbl_Login1">
+              <PropertyRef Name="rowID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Tbl_PersonDetailsEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Qualification" />
+          <Property Type="Int32" Name="Profession" />
+          <Property Type="Int32" Name="MaritalStatus" />
+          <Property Type="DateTime" Name="DOB" />
+          <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="City" />
+          <Property Type="Int64" Name="ZipCode" />
+          <Property Type="Int64" Name="Country" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="DateTime" Name="LastUpdate" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="Boolean" Name="IsPersonalIncomeExpenses" />
+        </EntityType>
+        <EntityType Name="Tbl_PersonPhoto">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="PersonID" />
+          <Property Type="String" Name="PersonPhoto" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="DateTime" Name="LastUpdate" />
+        </EntityType>
+        <EntityType Name="Tbl_PersonalIncomeExpensesEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int32" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PersonID" />
+          <Property Type="Int32" Name="ItemID" />
+          <Property Type="Double" Name="Amount" />
+          <Property Type="DateTime" Name="EntryDate" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LastUpdate" />
+        </EntityType>
+        <EntityType Name="Tbl_DailyMarketEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PersonName" Nullable="false" />
+          <Property Type="Double" Name="TotalMarket" />
+          <Property Type="DateTime" Name="EntryDate" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LastUpdate" />
+        </EntityType>
+        <EntityType Name="Tbl_DailyMealEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PersonID" />
+          <Property Type="Double" Name="MealNo" />
+          <Property Type="DateTime" Name="EntryDate" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LastUpdate" />
+        </EntityType>
+        <EntityType Name="Qry_DailyMarketEntry">
+          <Key>
+            <PropertyRef Name="PersonName" />
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Double" Name="TotalMarket" />
+          <Property Type="DateTime" Name="EntryDate" />
+          <Property Type="Int32" Name="PersonName" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="rowID" Nullable="false" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Qry_DailyMealEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int32" Name="PersonID" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Double" Name="MealNo" />
+          <Property Type="DateTime" Name="EntryDate" />
+          <Property Type="Int64" Name="rowID" Nullable="false" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Tbl_ExtraExpensesDtlsEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PersonName" />
+          <Property Type="Int64" Name="expID" />
+          <Property Type="Int64" Name="expAmt" />
+          <Property Type="DateTime" Name="entryDate" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LastUpdate" />
+        </EntityType>
+        <EntityType Name="Qry_ExtraExpensesDtlsEntry">
+          <Key>
+            <PropertyRef Name="rowID" />
+            <PropertyRef Name="ExtraDetailRowID" />
+          </Key>
+          <Property Type="Int64" Name="rowID" Nullable="false" />
+          <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="entryDate" />
+          <Property Type="Int64" Name="expAmt" />
+          <Property Type="Int64" Name="ExtraDetailRowID" Nullable="false" />
+          <Property Type="Boolean" Name="IsExpenses" />
+          <Property Type="Boolean" Name="IsUtilities" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="IsExtratExpenses" />
+          <Property Type="Int64" Name="expID" />
+          <Property Type="Int32" Name="PersonName" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_DepositMaster">
+          <Key>
+            <PropertyRef Name="rowID" />
+          </Key>
+          <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="TotalYear" />
+          <Property Type="DateTime" Name="CreateDate" />
+          <Property Type="Boolean" Name="IsActive" />
+          <Property Type="String" Name="Identification" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="ItemNo" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RoomManagementNewModelStoreContainer" CdmEntityContainer="RoomManagementNewEntities">
+          <EntitySetMapping Name="Tbl_cityMaster">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_cityMaster">
+              <MappingFragment StoreEntitySet="Tbl_cityMaster">
+                <ScalarProperty Name="createDate" ColumnName="createDate" />
+                <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+                <ScalarProperty Name="zipCode" ColumnName="zipCode" />
+                <ScalarProperty Name="cityName" ColumnName="cityName" />
+                <ScalarProperty Name="cityCode" ColumnName="cityCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_CountryMaster">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_CountryMaster">
+              <MappingFragment StoreEntitySet="Tbl_CountryMaster">
+                <ScalarProperty Name="createDate" ColumnName="createDate" />
+                <ScalarProperty Name="countryName" ColumnName="countryName" />
+                <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_maritalStatusMaster">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_maritalStatusMaster">
+              <MappingFragment StoreEntitySet="Tbl_maritalStatusMaster">
+                <ScalarProperty Name="createDate" ColumnName="createDate" />
+                <ScalarProperty Name="maritalName" ColumnName="maritalName" />
+                <ScalarProperty Name="marialCode" ColumnName="marialCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_professionMaster">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_professionMaster">
+              <MappingFragment StoreEntitySet="Tbl_professionMaster">
+                <ScalarProperty Name="createDate" ColumnName="createDate" />
+                <ScalarProperty Name="professionName" ColumnName="professionName" />
+                <ScalarProperty Name="professionCode" ColumnName="professionCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_qualificationMaster">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_qualificationMaster">
+              <MappingFragment StoreEntitySet="Tbl_qualificationMaster">
+                <ScalarProperty Name="createDate" ColumnName="createDate" />
+                <ScalarProperty Name="qualificationName" ColumnName="qualificationName" />
+                <ScalarProperty Name="qualificationCode" ColumnName="qualificationCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qry_CityMaster">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_CityMaster">
+              <MappingFragment StoreEntitySet="Qry_CityMaster">
+                <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+                <ScalarProperty Name="zipCode" ColumnName="zipCode" />
+                <ScalarProperty Name="cityName" ColumnName="cityName" />
+                <ScalarProperty Name="cityCode" ColumnName="cityCode" />
+                <ScalarProperty Name="countryName" ColumnName="countryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_DepositDetailsEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_DepositDetailsEntry">
+              <MappingFragment StoreEntitySet="Tbl_DepositDetailsEntry">
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qry_DepositEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_DepositEntry">
+              <MappingFragment StoreEntitySet="Qry_DepositEntry">
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+                <ScalarProperty Name="TotalYear" ColumnName="TotalYear" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qry_PersonalIncomeExpensesEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_PersonalIncomeExpensesEntry">
+              <MappingFragment StoreEntitySet="Qry_PersonalIncomeExpensesEntry">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsUtilities" ColumnName="IsUtilities" />
+                <ScalarProperty Name="IsExpenses" ColumnName="IsExpenses" />
+                <ScalarProperty Name="IsPersonalIncomeExpenses" ColumnName="IsPersonalIncomeExpenses" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_ExpensesMst">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_ExpensesMst">
+              <MappingFragment StoreEntitySet="Tbl_ExpensesMst">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="IsExtratExpenses" ColumnName="IsExtratExpenses" />
+                <ScalarProperty Name="IsUtilities" ColumnName="IsUtilities" />
+                <ScalarProperty Name="IsExpenses" ColumnName="IsExpenses" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Login">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_Login">
+              <MappingFragment StoreEntitySet="Tbl_Login">
+                <ScalarProperty Name="userType" ColumnName="userType" />
+                <ScalarProperty Name="uname" ColumnName="uname" />
+                <ScalarProperty Name="createDate" ColumnName="createDate" />
+                <ScalarProperty Name="upwd" ColumnName="upwd" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_PersonDetailsEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_PersonDetailsEntry">
+              <MappingFragment StoreEntitySet="Tbl_PersonDetailsEntry">
+                <ScalarProperty Name="IsPersonalIncomeExpenses" ColumnName="IsPersonalIncomeExpenses" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="Profession" ColumnName="Profession" />
+                <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_PersonPhoto">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_PersonPhoto">
+              <MappingFragment StoreEntitySet="Tbl_PersonPhoto">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="PersonPhoto" ColumnName="PersonPhoto" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_PersonalIncomeExpensesEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_PersonalIncomeExpensesEntry">
+              <MappingFragment StoreEntitySet="Tbl_PersonalIncomeExpensesEntry">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_DailyMarketEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_DailyMarketEntry">
+              <MappingFragment StoreEntitySet="Tbl_DailyMarketEntry">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="TotalMarket" ColumnName="TotalMarket" />
+                <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_DailyMealEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_DailyMealEntry">
+              <MappingFragment StoreEntitySet="Tbl_DailyMealEntry">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="MealNo" ColumnName="MealNo" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qry_DailyMarketEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_DailyMarketEntry">
+              <MappingFragment StoreEntitySet="Qry_DailyMarketEntry">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="TotalMarket" ColumnName="TotalMarket" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qry_DailyMealEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_DailyMealEntry">
+              <MappingFragment StoreEntitySet="Qry_DailyMealEntry">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="MealNo" ColumnName="MealNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_ExtraExpensesDtlsEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_ExtraExpensesDtlsEntry">
+              <MappingFragment StoreEntitySet="Tbl_ExtraExpensesDtlsEntry">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="entryDate" ColumnName="entryDate" />
+                <ScalarProperty Name="expAmt" ColumnName="expAmt" />
+                <ScalarProperty Name="expID" ColumnName="expID" />
+                <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qry_ExtraExpensesDtlsEntry">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_ExtraExpensesDtlsEntry">
+              <MappingFragment StoreEntitySet="Qry_ExtraExpensesDtlsEntry">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+                <ScalarProperty Name="expID" ColumnName="expID" />
+                <ScalarProperty Name="IsExtratExpenses" ColumnName="IsExtratExpenses" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsUtilities" ColumnName="IsUtilities" />
+                <ScalarProperty Name="IsExpenses" ColumnName="IsExpenses" />
+                <ScalarProperty Name="ExtraDetailRowID" ColumnName="ExtraDetailRowID" />
+                <ScalarProperty Name="expAmt" ColumnName="expAmt" />
+                <ScalarProperty Name="entryDate" ColumnName="entryDate" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_DepositMaster">
+            <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_DepositMaster">
+              <MappingFragment StoreEntitySet="Tbl_DepositMaster">
+                <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+                <ScalarProperty Name="Identification" ColumnName="Identification" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="TotalYear" ColumnName="TotalYear" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="rowID" ColumnName="rowID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModelRoom">
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_cityMaster" Width="1.5" PointX="2" PointY="0.75" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_CountryMaster" Width="1.5" PointX="2" PointY="3.125" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_maritalStatusMaster" Width="1.5" PointX="1.875" PointY="5" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_professionMaster" Width="1.5" PointX="6.375" PointY="0.75" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_qualificationMaster" Width="1.5" PointX="6" PointY="3" Height="1.5956835937500102" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Qry_CityMaster" Width="1.5" PointX="7.75" PointY="4.125" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_DepositDetailsEntry" Width="1.5" PointX="5.625" PointY="4.875" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Qry_DepositEntry" Width="1.5" PointX="8.875" PointY="10.375" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Qry_PersonalIncomeExpensesEntry" Width="1.5" PointX="5.5" PointY="9.875" Height="3.7109993489583246" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_ExpensesMst" Width="1.5" PointX="3.125" PointY="10.125" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_Login" Width="1.5" PointX="9" PointY="0.75" Height="2.5571907552083388" />
+        <AssociationConnector Association="RoomManagementNewModel.FK_Tbl_Login_Tbl_Login" >
+          <ConnectorPoint PointX="9.5319230769230767" PointY="3.3071907552083388" />
+          <ConnectorPoint PointX="9.5319230769230767" PointY="3.5571907552083388" />
+          <ConnectorPoint PointX="9.9784615384615378" PointY="3.5571907552083388" />
+          <ConnectorPoint PointX="9.9784615384615378" PointY="3.3071907552083388" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_PersonDetailsEntry" Width="1.5" PointX="11.625" PointY="7.625" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_PersonPhoto" Width="1.5" PointX="3.625" PointY="5.375" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_PersonalIncomeExpensesEntry" Width="1.5" PointX="1.5" PointY="9.625" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_DailyMarketEntry" Width="1.5" PointX="3.875" PointY="0.75" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_DailyMealEntry" Width="1.5" PointX="3.75" PointY="3" Height="2.1725878906250067" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Qry_DailyMarketEntry" Width="1.5" PointX="7.375" PointY="7" Height="2.1725878906250067" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Qry_DailyMealEntry" Width="1.5" PointX="9.125" PointY="7.125" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_ExtraExpensesDtlsEntry" Width="1.5" PointX="11.5" PointY="0.875" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Qry_ExtraExpensesDtlsEntry" Width="1.5" PointX="0.5" PointY="12.875" Height="3.3263964843750102" />
+        <EntityTypeShape EntityType="RoomManagementNewModel.Tbl_DepositMaster" Width="1.5" PointX="11.375" PointY="12.75" Height="2.3648893229166674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

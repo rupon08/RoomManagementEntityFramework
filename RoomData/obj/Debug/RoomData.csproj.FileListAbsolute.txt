@@ -1,0 +1,18 @@
+E:\Projects\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.dll.config
+E:\Projects\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.dll
+E:\Projects\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.pdb
+E:\Projects\RoomManagementEntityFramework\RoomData\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.dll
+E:\Projects\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.pdb
+E:\Sws&Proj\My Proj\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.dll.config
+E:\Sws&Proj\My Proj\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.dll
+E:\Sws&Proj\My Proj\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.pdb
+E:\Sws&Proj\My Proj\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.csprojResolveAssemblyReference.cache
+E:\Sws&Proj\My Proj\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.dll
+E:\Sws&Proj\My Proj\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.pdb
+E:\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.dll.config
+E:\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.dll
+E:\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.pdb
+E:\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.csprojResolveAssemblyReference.cache
+E:\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.dll
+E:\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.pdb

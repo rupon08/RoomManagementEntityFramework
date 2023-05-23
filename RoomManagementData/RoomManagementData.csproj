@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{726B6DF3-CDFD-4D73-86F6-B2B3004AB242}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RoomManagementData</RootNamespace>
+    <AssemblyName>RoomManagementData</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Context.Extensions.cs">
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelRoomManagement.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelRoomManagement.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelRoomManagement.Context.Extensions.cs">
+      <DependentUpon>ModelRoomManagement.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelRoomManagement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelRoomManagement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelRoomManagement.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tbl_cityMaster.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_CountryMaster.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_DailyMarketEntry.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_DailyMealEntry.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_ExtraExpensesDtlsEntry.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_extraExpensesMst.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_Login.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_maritalStatusMaster.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_PersonDetailsEntry.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_PersonPhoto.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tbl_qualificationMaster.cs">
+      <DependentUpon>ModelRoomManagement.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ModelRoomManagement.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelRoomManagement.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </None>
+    <None Include="ModelRoomManagement.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelRoomManagement.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ModelRoomManagement.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelRoomManagement.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

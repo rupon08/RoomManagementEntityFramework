@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4DA0C777-CDD5-4299-8418-EEA2A0003411}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RoomManagementEntityFramework</RootNamespace>
+    <AssemblyName>RoomManagementEntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\USER\Desktop\Publish Project\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EC95D6B50CD3353654CEB1D7D1AFC50194298469</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RoomManagementEntityFramework_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CityImportFromExcelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CityImportFromExcelForm.Designer.cs">
+      <DependentUpon>CityImportFromExcelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DSFinalCalculation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSFinalCalculation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangePassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePassWord.Designer.cs">
+      <DependentUpon>FrmChangePassWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDailyMarket_Meal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDailyMarket_Meal.Designer.cs">
+      <DependentUpon>FrmDailyMarket_Meal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDepositDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepositDetails.Designer.cs">
+      <DependentUpon>FrmDepositDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExtraExpensesDetailsEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExtraExpensesDetailsEntry.Designer.cs">
+      <DependentUpon>FrmExtraExpensesDetailsEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMultipleDateEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMultipleDateEntry.Designer.cs">
+      <DependentUpon>FrmMultipleDateEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNewUserCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewUserCreate.Designer.cs">
+      <DependentUpon>FrmNewUserCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNewUserCreateSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewUserCreateSearch.Designer.cs">
+      <DependentUpon>FrmNewUserCreateSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonalIncome_Expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonalIncome_Expenses.Designer.cs">
+      <DependentUpon>FrmPersonalIncome_Expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonEntry.Designer.cs">
+      <DependentUpon>FrmPersonEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalClass.cs" />
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\CRFinalCalculationReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRFinalCalculationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CRPersonalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRPersonalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CSRExtraExpensesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSRExtraExpensesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CSRIncomeReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSRIncomeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\FinalCalculationReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FinalCalculationReportForm.Designer.cs">
+      <DependentUpon>FinalCalculationReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\PersonalCalculationReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\PersonalCalculationReportForm.Designer.cs">
+      <DependentUpon>PersonalCalculationReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportViewerForm.Designer.cs">
+      <DependentUpon>ReportViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FrmCityMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\FrmCityMaster.Designer.cs">
+      <DependentUpon>FrmCityMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FrmCountryMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\FrmCountryMaster.Designer.cs">
+      <DependentUpon>FrmCountryMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FrmExtraExpensesMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\FrmExtraExpensesMaster.Designer.cs">
+      <DependentUpon>FrmExtraExpensesMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FrmMaritalStatusMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\FrmMaritalStatusMaster.Designer.cs">
+      <DependentUpon>FrmMaritalStatusMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FrmProfessionMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\FrmProfessionMaster.Designer.cs">
+      <DependentUpon>FrmProfessionMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\FrmQualificationMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\FrmQualificationMaster.Designer.cs">
+      <DependentUpon>FrmQualificationMaster.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CityImportFromExcelForm.resx">
+      <DependentUpon>CityImportFromExcelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangePassWord.resx">
+      <DependentUpon>FrmChangePassWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDailyMarket_Meal.resx">
+      <DependentUpon>FrmDailyMarket_Meal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepositDetails.resx">
+      <DependentUpon>FrmDepositDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExtraExpensesDetailsEntry.resx">
+      <DependentUpon>FrmExtraExpensesDetailsEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMultipleDateEntry.resx">
+      <DependentUpon>FrmMultipleDateEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewUserCreate.resx">
+      <DependentUpon>FrmNewUserCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewUserCreateSearch.resx">
+      <DependentUpon>FrmNewUserCreateSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonalIncome_Expenses.resx">
+      <DependentUpon>FrmPersonalIncome_Expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonEntry.resx">
+      <DependentUpon>FrmPersonEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\CRFinalCalculationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRFinalCalculationReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CRPersonalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CRPersonalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CSRExtraExpensesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CSRExtraExpensesReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CSRIncomeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CSRIncomeReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FinalCalculationReportForm.resx">
+      <DependentUpon>FinalCalculationReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PersonalCalculationReportForm.resx">
+      <DependentUpon>PersonalCalculationReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportViewerForm.resx">
+      <DependentUpon>ReportViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\FrmCityMaster.resx">
+      <DependentUpon>FrmCityMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\FrmCountryMaster.resx">
+      <DependentUpon>FrmCountryMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\FrmExtraExpensesMaster.resx">
+      <DependentUpon>FrmExtraExpensesMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\FrmMaritalStatusMaster.resx">
+      <DependentUpon>FrmMaritalStatusMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\FrmProfessionMaster.resx">
+      <DependentUpon>FrmProfessionMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\FrmQualificationMaster.resx">
+      <DependentUpon>FrmQualificationMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet\DSFinalCalculation.xsc">
+      <DependentUpon>DSFinalCalculation.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DSFinalCalculation.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSFinalCalculation.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DSFinalCalculation.xss">
+      <DependentUpon>DSFinalCalculation.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RoomData\RoomData.csproj">
+      <Project>{B8A69AC4-7EA5-427C-930C-FE52DFD6C00A}</Project>
+      <Name>RoomData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RoomService\RoomService.csproj">
+      <Project>{7F294B1A-8B64-47F0-8114-652A1A9F8FD3}</Project>
+      <Name>RoomService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noimageavailable.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxCrystalActiveXReportViewerLib13">
+      <Guid>{B816E96D-D151-4000-BADB-53A2D8F3FC65}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="CrystalActiveXReportViewerLib13">
+      <Guid>{B816E96D-D151-4000-BADB-53A2D8F3FC65}</Guid>
+      <VersionMajor>13</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gnome-List-Add-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editS.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRed.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dialog-Apply-48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RoomManagementNewModelStoreContainer" CdmEntityContainer="RoomManagementNewEntities">
+    <EntitySetMapping Name="Tbl_cityMaster">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_cityMaster">
+        <MappingFragment StoreEntitySet="Tbl_cityMaster">
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+          <ScalarProperty Name="zipCode" ColumnName="zipCode" />
+          <ScalarProperty Name="cityName" ColumnName="cityName" />
+          <ScalarProperty Name="cityCode" ColumnName="cityCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_CountryMaster">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_CountryMaster">
+        <MappingFragment StoreEntitySet="Tbl_CountryMaster">
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="countryName" ColumnName="countryName" />
+          <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_maritalStatusMaster">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_maritalStatusMaster">
+        <MappingFragment StoreEntitySet="Tbl_maritalStatusMaster">
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="maritalName" ColumnName="maritalName" />
+          <ScalarProperty Name="marialCode" ColumnName="marialCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_professionMaster">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_professionMaster">
+        <MappingFragment StoreEntitySet="Tbl_professionMaster">
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="professionName" ColumnName="professionName" />
+          <ScalarProperty Name="professionCode" ColumnName="professionCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_qualificationMaster">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_qualificationMaster">
+        <MappingFragment StoreEntitySet="Tbl_qualificationMaster">
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="qualificationName" ColumnName="qualificationName" />
+          <ScalarProperty Name="qualificationCode" ColumnName="qualificationCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Qry_CityMaster">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_CityMaster">
+        <MappingFragment StoreEntitySet="Qry_CityMaster">
+          <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+          <ScalarProperty Name="zipCode" ColumnName="zipCode" />
+          <ScalarProperty Name="cityName" ColumnName="cityName" />
+          <ScalarProperty Name="cityCode" ColumnName="cityCode" />
+          <ScalarProperty Name="countryName" ColumnName="countryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_DepositDetailsEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_DepositDetailsEntry">
+        <MappingFragment StoreEntitySet="Tbl_DepositDetailsEntry">
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Qry_DepositEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_DepositEntry">
+        <MappingFragment StoreEntitySet="Qry_DepositEntry">
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="TotalYear" ColumnName="TotalYear" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Qry_PersonalIncomeExpensesEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_PersonalIncomeExpensesEntry">
+        <MappingFragment StoreEntitySet="Qry_PersonalIncomeExpensesEntry">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsUtilities" ColumnName="IsUtilities" />
+          <ScalarProperty Name="IsExpenses" ColumnName="IsExpenses" />
+          <ScalarProperty Name="IsPersonalIncomeExpenses" ColumnName="IsPersonalIncomeExpenses" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_ExpensesMst">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_ExpensesMst">
+        <MappingFragment StoreEntitySet="Tbl_ExpensesMst">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="IsExtratExpenses" ColumnName="IsExtratExpenses" />
+          <ScalarProperty Name="IsUtilities" ColumnName="IsUtilities" />
+          <ScalarProperty Name="IsExpenses" ColumnName="IsExpenses" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Login">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_Login">
+        <MappingFragment StoreEntitySet="Tbl_Login">
+          <ScalarProperty Name="userType" ColumnName="userType" />
+          <ScalarProperty Name="uname" ColumnName="uname" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="upwd" ColumnName="upwd" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_PersonDetailsEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_PersonDetailsEntry">
+        <MappingFragment StoreEntitySet="Tbl_PersonDetailsEntry">
+          <ScalarProperty Name="IsPersonalIncomeExpenses" ColumnName="IsPersonalIncomeExpenses" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_PersonPhoto">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_PersonPhoto">
+        <MappingFragment StoreEntitySet="Tbl_PersonPhoto">
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="PersonPhoto" ColumnName="PersonPhoto" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_PersonalIncomeExpensesEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_PersonalIncomeExpensesEntry">
+        <MappingFragment StoreEntitySet="Tbl_PersonalIncomeExpensesEntry">
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_DailyMarketEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_DailyMarketEntry">
+        <MappingFragment StoreEntitySet="Tbl_DailyMarketEntry">
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="TotalMarket" ColumnName="TotalMarket" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_DailyMealEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_DailyMealEntry">
+        <MappingFragment StoreEntitySet="Tbl_DailyMealEntry">
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="MealNo" ColumnName="MealNo" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Qry_DailyMarketEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_DailyMarketEntry">
+        <MappingFragment StoreEntitySet="Qry_DailyMarketEntry">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="TotalMarket" ColumnName="TotalMarket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Qry_DailyMealEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_DailyMealEntry">
+        <MappingFragment StoreEntitySet="Qry_DailyMealEntry">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="MealNo" ColumnName="MealNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_ExtraExpensesDtlsEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_ExtraExpensesDtlsEntry">
+        <MappingFragment StoreEntitySet="Tbl_ExtraExpensesDtlsEntry">
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="entryDate" ColumnName="entryDate" />
+          <ScalarProperty Name="expAmt" ColumnName="expAmt" />
+          <ScalarProperty Name="expID" ColumnName="expID" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Qry_ExtraExpensesDtlsEntry">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Qry_ExtraExpensesDtlsEntry">
+        <MappingFragment StoreEntitySet="Qry_ExtraExpensesDtlsEntry">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="expID" ColumnName="expID" />
+          <ScalarProperty Name="IsExtratExpenses" ColumnName="IsExtratExpenses" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsUtilities" ColumnName="IsUtilities" />
+          <ScalarProperty Name="IsExpenses" ColumnName="IsExpenses" />
+          <ScalarProperty Name="ExtraDetailRowID" ColumnName="ExtraDetailRowID" />
+          <ScalarProperty Name="expAmt" ColumnName="expAmt" />
+          <ScalarProperty Name="entryDate" ColumnName="entryDate" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_DepositMaster">
+      <EntityTypeMapping TypeName="RoomManagementNewModel.Tbl_DepositMaster">
+        <MappingFragment StoreEntitySet="Tbl_DepositMaster">
+          <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+          <ScalarProperty Name="Identification" ColumnName="Identification" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="TotalYear" ColumnName="TotalYear" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="rowID" ColumnName="rowID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

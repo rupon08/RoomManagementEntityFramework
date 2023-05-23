@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoomManagementNewModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RoomManagementNewModelStoreContainer">
+    <EntitySet Name="Tbl_cityMaster" EntityType="RoomManagementNewModel.Store.Tbl_cityMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_CountryMaster" EntityType="RoomManagementNewModel.Store.Tbl_CountryMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_DailyMarketEntry" EntityType="RoomManagementNewModel.Store.Tbl_DailyMarketEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_DailyMealEntry" EntityType="RoomManagementNewModel.Store.Tbl_DailyMealEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_ExtraExpensesDtlsEntry" EntityType="RoomManagementNewModel.Store.Tbl_ExtraExpensesDtlsEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_extraExpensesMst" EntityType="RoomManagementNewModel.Store.Tbl_extraExpensesMst" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_Login" EntityType="RoomManagementNewModel.Store.Tbl_Login" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_maritalStatusMaster" EntityType="RoomManagementNewModel.Store.Tbl_maritalStatusMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_PersonDetailsEntry" EntityType="RoomManagementNewModel.Store.Tbl_PersonDetailsEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_PersonPhoto" EntityType="RoomManagementNewModel.Store.Tbl_PersonPhoto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_qualificationMaster" EntityType="RoomManagementNewModel.Store.Tbl_qualificationMaster" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Tbl_cityMaster">
+    <Key>
+      <PropertyRef Name="cityCode" />
+    </Key>
+    <Property Name="cityCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="cityName" Type="nvarchar" MaxLength="50" />
+    <Property Name="zipCode" Type="int" />
+    <Property Name="countryCode" Type="int" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_CountryMaster">
+    <Key>
+      <PropertyRef Name="countryCode" />
+    </Key>
+    <Property Name="countryCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="countryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_DailyMarketEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonName" Type="int" Nullable="false" />
+    <Property Name="TotalMarket" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_DailyMealEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="int" />
+    <Property Name="MealNo" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_ExtraExpensesDtlsEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="expID" Type="bigint" />
+    <Property Name="expAmt" Type="bigint" />
+    <Property Name="entryDate" Type="datetime" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_extraExpensesMst">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="extraItemName" Type="nvarchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_Login">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="nvarchar" MaxLength="50" />
+    <Property Name="upwd" Type="nvarchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_maritalStatusMaster">
+    <Key>
+      <PropertyRef Name="marialCode" />
+    </Key>
+    <Property Name="marialCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="maritalName" Type="nvarchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_PersonDetailsEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Qualification" Type="int" />
+    <Property Name="Profession" Type="int" />
+    <Property Name="MaritalStatus" Type="int" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="bigint" />
+    <Property Name="ZipCode" Type="bigint" />
+    <Property Name="Country" Type="bigint" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tbl_PersonPhoto">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="bigint" />
+    <Property Name="PersonPhoto" Type="image" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_qualificationMaster">
+    <Key>
+      <PropertyRef Name="qualificationCode" />
+    </Key>
+    <Property Name="qualificationCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="qualificationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'RoomManagementNew.dbo.Tbl_professionMaster' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="Tbl_professionMaster">
+        <Property Name="professionCode" Type="int" />
+        <Property Name="professionName" Type="nvarchar" MaxLength="50" />
+        <Property Name="createDate" Type="datetime" />
+      </EntityType>-->
+</Schema>

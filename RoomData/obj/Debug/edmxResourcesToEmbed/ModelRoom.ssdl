@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoomManagementNewModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RoomManagementNewModelStoreContainer">
+    <EntitySet Name="Tbl_cityMaster" EntityType="RoomManagementNewModel.Store.Tbl_cityMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_CountryMaster" EntityType="RoomManagementNewModel.Store.Tbl_CountryMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_DailyMarketEntry" EntityType="RoomManagementNewModel.Store.Tbl_DailyMarketEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_DailyMealEntry" EntityType="RoomManagementNewModel.Store.Tbl_DailyMealEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_DepositDetailsEntry" EntityType="RoomManagementNewModel.Store.Tbl_DepositDetailsEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_DepositMaster" EntityType="RoomManagementNewModel.Store.Tbl_DepositMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_ExpensesMst" EntityType="RoomManagementNewModel.Store.Tbl_ExpensesMst" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_ExtraExpensesDtlsEntry" EntityType="RoomManagementNewModel.Store.Tbl_ExtraExpensesDtlsEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_Login" EntityType="RoomManagementNewModel.Store.Tbl_Login" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_maritalStatusMaster" EntityType="RoomManagementNewModel.Store.Tbl_maritalStatusMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_PersonalIncomeExpensesEntry" EntityType="RoomManagementNewModel.Store.Tbl_PersonalIncomeExpensesEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_PersonDetailsEntry" EntityType="RoomManagementNewModel.Store.Tbl_PersonDetailsEntry" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_PersonPhoto" EntityType="RoomManagementNewModel.Store.Tbl_PersonPhoto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_professionMaster" EntityType="RoomManagementNewModel.Store.Tbl_professionMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_qualificationMaster" EntityType="RoomManagementNewModel.Store.Tbl_qualificationMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Qry_CityMaster" EntityType="RoomManagementNewModel.Store.Qry_CityMaster" store:Type="Views" store:Schema="dbo" store:Name="Qry_CityMaster">
+      <DefiningQuery>SELECT 
+      [Qry_CityMaster].[countryName] AS [countryName], 
+      [Qry_CityMaster].[cityCode] AS [cityCode], 
+      [Qry_CityMaster].[cityName] AS [cityName], 
+      [Qry_CityMaster].[zipCode] AS [zipCode], 
+      [Qry_CityMaster].[countryCode] AS [countryCode]
+      FROM [dbo].[Qry_CityMaster] AS [Qry_CityMaster]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Qry_DailyMarketEntry" EntityType="RoomManagementNewModel.Store.Qry_DailyMarketEntry" store:Type="Views" store:Schema="dbo" store:Name="Qry_DailyMarketEntry">
+      <DefiningQuery>SELECT 
+      [Qry_DailyMarketEntry].[TotalMarket] AS [TotalMarket], 
+      [Qry_DailyMarketEntry].[EntryDate] AS [EntryDate], 
+      [Qry_DailyMarketEntry].[PersonName] AS [PersonName], 
+      [Qry_DailyMarketEntry].[Name] AS [Name], 
+      [Qry_DailyMarketEntry].[rowID] AS [rowID], 
+      [Qry_DailyMarketEntry].[Description] AS [Description]
+      FROM [dbo].[Qry_DailyMarketEntry] AS [Qry_DailyMarketEntry]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Qry_DailyMealEntry" EntityType="RoomManagementNewModel.Store.Qry_DailyMealEntry" store:Type="Views" store:Schema="dbo" store:Name="Qry_DailyMealEntry">
+      <DefiningQuery>SELECT 
+      [Qry_DailyMealEntry].[PersonID] AS [PersonID], 
+      [Qry_DailyMealEntry].[Name] AS [Name], 
+      [Qry_DailyMealEntry].[MealNo] AS [MealNo], 
+      [Qry_DailyMealEntry].[EntryDate] AS [EntryDate], 
+      [Qry_DailyMealEntry].[rowID] AS [rowID], 
+      [Qry_DailyMealEntry].[Description] AS [Description]
+      FROM [dbo].[Qry_DailyMealEntry] AS [Qry_DailyMealEntry]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Qry_DepositEntry" EntityType="RoomManagementNewModel.Store.Qry_DepositEntry" store:Type="Views" store:Schema="dbo" store:Name="Qry_DepositEntry">
+      <DefiningQuery>SELECT 
+      [Qry_DepositEntry].[ItemID] AS [ItemID], 
+      [Qry_DepositEntry].[ItemName] AS [ItemName], 
+      [Qry_DepositEntry].[TotalYear] AS [TotalYear], 
+      [Qry_DepositEntry].[rowID] AS [rowID], 
+      [Qry_DepositEntry].[PersonID] AS [PersonID], 
+      [Qry_DepositEntry].[Amount] AS [Amount], 
+      [Qry_DepositEntry].[EntryDate] AS [EntryDate]
+      FROM [dbo].[Qry_DepositEntry] AS [Qry_DepositEntry]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Qry_ExtraExpensesDtlsEntry" EntityType="RoomManagementNewModel.Store.Qry_ExtraExpensesDtlsEntry" store:Type="Views" store:Schema="dbo" store:Name="Qry_ExtraExpensesDtlsEntry">
+      <DefiningQuery>SELECT 
+      [Qry_ExtraExpensesDtlsEntry].[rowID] AS [rowID], 
+      [Qry_ExtraExpensesDtlsEntry].[ItemName] AS [ItemName], 
+      [Qry_ExtraExpensesDtlsEntry].[entryDate] AS [entryDate], 
+      [Qry_ExtraExpensesDtlsEntry].[expAmt] AS [expAmt], 
+      [Qry_ExtraExpensesDtlsEntry].[ExtraDetailRowID] AS [ExtraDetailRowID], 
+      [Qry_ExtraExpensesDtlsEntry].[IsExpenses] AS [IsExpenses], 
+      [Qry_ExtraExpensesDtlsEntry].[IsUtilities] AS [IsUtilities], 
+      [Qry_ExtraExpensesDtlsEntry].[Description] AS [Description], 
+      [Qry_ExtraExpensesDtlsEntry].[IsExtratExpenses] AS [IsExtratExpenses], 
+      [Qry_ExtraExpensesDtlsEntry].[expID] AS [expID], 
+      [Qry_ExtraExpensesDtlsEntry].[PersonName] AS [PersonName], 
+      [Qry_ExtraExpensesDtlsEntry].[Name] AS [Name]
+      FROM [dbo].[Qry_ExtraExpensesDtlsEntry] AS [Qry_ExtraExpensesDtlsEntry]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Qry_PersonalIncomeExpensesEntry" EntityType="RoomManagementNewModel.Store.Qry_PersonalIncomeExpensesEntry" store:Type="Views" store:Schema="dbo" store:Name="Qry_PersonalIncomeExpensesEntry">
+      <DefiningQuery>SELECT 
+      [Qry_PersonalIncomeExpensesEntry].[rowID] AS [rowID], 
+      [Qry_PersonalIncomeExpensesEntry].[PersonID] AS [PersonID], 
+      [Qry_PersonalIncomeExpensesEntry].[Amount] AS [Amount], 
+      [Qry_PersonalIncomeExpensesEntry].[EntryDate] AS [EntryDate], 
+      [Qry_PersonalIncomeExpensesEntry].[ItemID] AS [ItemID], 
+      [Qry_PersonalIncomeExpensesEntry].[ItemName] AS [ItemName], 
+      [Qry_PersonalIncomeExpensesEntry].[Name] AS [Name], 
+      [Qry_PersonalIncomeExpensesEntry].[FatherName] AS [FatherName], 
+      [Qry_PersonalIncomeExpensesEntry].[MotherName] AS [MotherName], 
+      [Qry_PersonalIncomeExpensesEntry].[IsActive] AS [IsActive], 
+      [Qry_PersonalIncomeExpensesEntry].[IsPersonalIncomeExpenses] AS [IsPersonalIncomeExpenses], 
+      [Qry_PersonalIncomeExpensesEntry].[IsExpenses] AS [IsExpenses], 
+      [Qry_PersonalIncomeExpensesEntry].[IsUtilities] AS [IsUtilities], 
+      [Qry_PersonalIncomeExpensesEntry].[Description] AS [Description]
+      FROM [dbo].[Qry_PersonalIncomeExpensesEntry] AS [Qry_PersonalIncomeExpensesEntry]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Tbl_Login_Tbl_Login" Association="RoomManagementNewModel.Store.FK_Tbl_Login_Tbl_Login">
+      <End Role="Tbl_Login" EntitySet="Tbl_Login" />
+      <End Role="Tbl_Login1" EntitySet="Tbl_Login" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Tbl_cityMaster">
+    <Key>
+      <PropertyRef Name="cityCode" />
+    </Key>
+    <Property Name="cityCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="cityName" Type="nvarchar" MaxLength="50" />
+    <Property Name="zipCode" Type="int" />
+    <Property Name="countryCode" Type="int" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_CountryMaster">
+    <Key>
+      <PropertyRef Name="countryCode" />
+    </Key>
+    <Property Name="countryCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="countryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_DailyMarketEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonName" Type="int" Nullable="false" />
+    <Property Name="TotalMarket" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="Description" Type="varchar" MaxLength="800" />
+    <Property Name="LastUpdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_DailyMealEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="int" />
+    <Property Name="MealNo" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="LastUpdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_DepositDetailsEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="int" />
+    <Property Name="ItemID" Type="int" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_DepositMaster">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalYear" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Identification" Type="nchar" MaxLength="1" />
+    <Property Name="ItemNo" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Tbl_ExpensesMst">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsExpenses" Type="bit" />
+    <Property Name="IsUtilities" Type="bit" />
+    <Property Name="IsExtratExpenses" Type="bit" />
+    <Property Name="LastUpdate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tbl_ExtraExpensesDtlsEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonName" Type="int" />
+    <Property Name="expID" Type="bigint" />
+    <Property Name="expAmt" Type="bigint" />
+    <Property Name="entryDate" Type="datetime" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="LastUpdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_Login">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="nvarchar" MaxLength="50" />
+    <Property Name="upwd" Type="nvarchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+    <Property Name="uname" Type="nvarchar" MaxLength="50" />
+    <Property Name="userType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tbl_maritalStatusMaster">
+    <Key>
+      <PropertyRef Name="marialCode" />
+    </Key>
+    <Property Name="marialCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="maritalName" Type="nvarchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_PersonalIncomeExpensesEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="int" />
+    <Property Name="ItemID" Type="int" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="LastUpdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_PersonDetailsEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Qualification" Type="int" />
+    <Property Name="Profession" Type="int" />
+    <Property Name="MaritalStatus" Type="int" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="bigint" />
+    <Property Name="ZipCode" Type="bigint" />
+    <Property Name="Country" Type="bigint" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsPersonalIncomeExpenses" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tbl_PersonPhoto">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PersonID" Type="bigint" />
+    <Property Name="PersonPhoto" Type="varchar" MaxLength="200" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_professionMaster">
+    <Key>
+      <PropertyRef Name="professionCode" />
+    </Key>
+    <Property Name="professionCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="professionName" Type="varchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_qualificationMaster">
+    <Key>
+      <PropertyRef Name="qualificationCode" />
+    </Key>
+    <Property Name="qualificationCode" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="qualificationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_CityMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Qry_CityMaster">
+    <Key>
+      <PropertyRef Name="cityCode" />
+    </Key>
+    <Property Name="countryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="cityCode" Type="int" Nullable="false" />
+    <Property Name="cityName" Type="nvarchar" MaxLength="50" />
+    <Property Name="zipCode" Type="int" />
+    <Property Name="countryCode" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_DailyMarketEntry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Qry_DailyMarketEntry">
+    <Key>
+      <PropertyRef Name="PersonName" />
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="TotalMarket" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="PersonName" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="rowID" Type="bigint" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_DailyMealEntry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Qry_DailyMealEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="PersonID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="MealNo" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="rowID" Type="bigint" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_DepositEntry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Qry_DepositEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="ItemID" Type="int" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotalYear" Type="int" />
+    <Property Name="rowID" Type="bigint" Nullable="false" />
+    <Property Name="PersonID" Type="int" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_ExtraExpensesDtlsEntry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Qry_ExtraExpensesDtlsEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+      <PropertyRef Name="ExtraDetailRowID" />
+    </Key>
+    <Property Name="rowID" Type="bigint" Nullable="false" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+    <Property Name="entryDate" Type="datetime" />
+    <Property Name="expAmt" Type="bigint" />
+    <Property Name="ExtraDetailRowID" Type="bigint" Nullable="false" />
+    <Property Name="IsExpenses" Type="bit" />
+    <Property Name="IsUtilities" Type="bit" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="IsExtratExpenses" Type="bit" />
+    <Property Name="expID" Type="bigint" />
+    <Property Name="PersonName" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RoomManagementNew.dbo.Qry_PersonalIncomeExpensesEntry' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Qry_PersonalIncomeExpensesEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Name="rowID" Type="int" Nullable="false" />
+    <Property Name="PersonID" Type="int" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="ItemID" Type="int" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsPersonalIncomeExpenses" Type="bit" />
+    <Property Name="IsExpenses" Type="bit" />
+    <Property Name="IsUtilities" Type="bit" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <Association Name="FK_Tbl_Login_Tbl_Login">
+    <End Role="Tbl_Login" Type="RoomManagementNewModel.Store.Tbl_Login" Multiplicity="1" />
+    <End Role="Tbl_Login1" Type="RoomManagementNewModel.Store.Tbl_Login" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Login">
+        <PropertyRef Name="rowID" />
+      </Principal>
+      <Dependent Role="Tbl_Login1">
+        <PropertyRef Name="rowID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

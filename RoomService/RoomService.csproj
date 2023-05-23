@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F294B1A-8B64-47F0-8114-652A1A9F8FD3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RoomService</RootNamespace>
+    <AssemblyName>RoomService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Qry_DepositEntryService.cs" />
+    <Compile Include="Tbl_DepositDetailsEntryService.cs" />
+    <Compile Include="Tbl_DepositMasterService.cs" />
+    <Compile Include="Qry_PersonalIncomeExpensesEntryService.cs" />
+    <Compile Include="Tbl_PersonalIncomeExpensesEntryService.cs" />
+    <Compile Include="Qry_ExtraExpensesDtlsEntryService.cs" />
+    <Compile Include="Tbl_ExtraExpensesDtlsEntryService.cs" />
+    <Compile Include="Tbl_extraExpensesMstService.cs" />
+    <Compile Include="Qry_CityMasterService.cs" />
+    <Compile Include="Tbl_LoginService.cs" />
+    <Compile Include="Tbl_PersonPhotoService.cs" />
+    <Compile Include="Tbl_CountryMasterService.cs" />
+    <Compile Include="Tbl_cityMasterService.cs" />
+    <Compile Include="Tbl_maritalStatusMasterService.cs" />
+    <Compile Include="Tbl_professionMasterService.cs" />
+    <Compile Include="Tbl_qualificationMasterService.cs" />
+    <Compile Include="Tbl_DailyMealService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tbl_DailyMarketService.cs" />
+    <Compile Include="Tbl_PersonDetailEntryService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RoomData\RoomData.csproj">
+      <Project>{B8A69AC4-7EA5-427C-930C-FE52DFD6C00A}</Project>
+      <Name>RoomData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

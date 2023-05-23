@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RoomManagementNewModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="RoomManagementNewEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tbl_cityMaster" EntityType="RoomManagementNewModel.Tbl_cityMaster" />
+    <EntitySet Name="Tbl_CountryMaster" EntityType="RoomManagementNewModel.Tbl_CountryMaster" />
+    <EntitySet Name="Tbl_maritalStatusMaster" EntityType="RoomManagementNewModel.Tbl_maritalStatusMaster" />
+    <EntitySet Name="Tbl_professionMaster" EntityType="RoomManagementNewModel.Tbl_professionMaster" />
+    <EntitySet Name="Tbl_qualificationMaster" EntityType="RoomManagementNewModel.Tbl_qualificationMaster" />
+    <EntitySet Name="Qry_CityMaster" EntityType="RoomManagementNewModel.Qry_CityMaster" />
+    <EntitySet Name="Tbl_DepositDetailsEntry" EntityType="RoomManagementNewModel.Tbl_DepositDetailsEntry" />
+    <EntitySet Name="Qry_DepositEntry" EntityType="RoomManagementNewModel.Qry_DepositEntry" />
+    <EntitySet Name="Qry_PersonalIncomeExpensesEntry" EntityType="RoomManagementNewModel.Qry_PersonalIncomeExpensesEntry" />
+    <EntitySet Name="Tbl_ExpensesMst" EntityType="RoomManagementNewModel.Tbl_ExpensesMst" />
+    <EntitySet Name="Tbl_Login" EntityType="RoomManagementNewModel.Tbl_Login" />
+    <AssociationSet Name="FK_Tbl_Login_Tbl_Login" Association="RoomManagementNewModel.FK_Tbl_Login_Tbl_Login">
+      <End Role="Tbl_Login" EntitySet="Tbl_Login" />
+      <End Role="Tbl_Login1" EntitySet="Tbl_Login" />
+    </AssociationSet>
+    <EntitySet Name="Tbl_PersonDetailsEntry" EntityType="RoomManagementNewModel.Tbl_PersonDetailsEntry" />
+    <EntitySet Name="Tbl_PersonPhoto" EntityType="RoomManagementNewModel.Tbl_PersonPhoto" />
+    <EntitySet Name="Tbl_PersonalIncomeExpensesEntry" EntityType="RoomManagementNewModel.Tbl_PersonalIncomeExpensesEntry" />
+    <EntitySet Name="Tbl_DailyMarketEntry" EntityType="RoomManagementNewModel.Tbl_DailyMarketEntry" />
+    <EntitySet Name="Tbl_DailyMealEntry" EntityType="RoomManagementNewModel.Tbl_DailyMealEntry" />
+    <EntitySet Name="Qry_DailyMarketEntry" EntityType="RoomManagementNewModel.Qry_DailyMarketEntry" />
+    <EntitySet Name="Qry_DailyMealEntry" EntityType="RoomManagementNewModel.Qry_DailyMealEntry" />
+    <EntitySet Name="Tbl_ExtraExpensesDtlsEntry" EntityType="RoomManagementNewModel.Tbl_ExtraExpensesDtlsEntry" />
+    <EntitySet Name="Qry_ExtraExpensesDtlsEntry" EntityType="RoomManagementNewModel.Qry_ExtraExpensesDtlsEntry" />
+    <EntitySet Name="Tbl_DepositMaster" EntityType="RoomManagementNewModel.Tbl_DepositMaster" />
+  </EntityContainer>
+  <EntityType Name="Tbl_cityMaster">
+    <Key>
+      <PropertyRef Name="cityCode" />
+    </Key>
+    <Property Type="Int32" Name="cityCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="cityName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="zipCode" />
+    <Property Type="Int32" Name="countryCode" />
+    <Property Type="DateTime" Name="createDate" />
+  </EntityType>
+  <EntityType Name="Tbl_CountryMaster">
+    <Key>
+      <PropertyRef Name="countryCode" />
+    </Key>
+    <Property Type="Int32" Name="countryCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="countryName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="createDate" />
+  </EntityType>
+  <EntityType Name="Tbl_maritalStatusMaster">
+    <Key>
+      <PropertyRef Name="marialCode" />
+    </Key>
+    <Property Type="Int32" Name="marialCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="maritalName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="createDate" />
+  </EntityType>
+  <EntityType Name="Tbl_professionMaster">
+    <Key>
+      <PropertyRef Name="professionCode" />
+    </Key>
+    <Property Type="Int32" Name="professionCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="professionName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="createDate" />
+  </EntityType>
+  <EntityType Name="Tbl_qualificationMaster">
+    <Key>
+      <PropertyRef Name="qualificationCode" />
+    </Key>
+    <Property Type="Int32" Name="qualificationCode" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="qualificationName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="createDate" />
+  </EntityType>
+  <EntityType Name="Qry_CityMaster">
+    <Key>
+      <PropertyRef Name="cityCode" />
+    </Key>
+    <Property Type="String" Name="countryName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="cityCode" Nullable="false" />
+    <Property Type="String" Name="cityName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="zipCode" />
+    <Property Type="Int32" Name="countryCode" />
+  </EntityType>
+  <EntityType Name="Tbl_DepositDetailsEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PersonID" />
+    <Property Type="Int32" Name="ItemID" />
+    <Property Type="Double" Name="Amount" />
+    <Property Type="DateTime" Name="EntryDate" />
+  </EntityType>
+  <EntityType Name="Qry_DepositEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int32" Name="ItemID" />
+    <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TotalYear" />
+    <Property Type="Int64" Name="rowID" Nullable="false" />
+    <Property Type="Int32" Name="PersonID" />
+    <Property Type="Double" Name="Amount" />
+    <Property Type="DateTime" Name="EntryDate" />
+  </EntityType>
+  <EntityType Name="Qry_PersonalIncomeExpensesEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int32" Name="rowID" Nullable="false" />
+    <Property Type="Int32" Name="PersonID" />
+    <Property Type="Double" Name="Amount" />
+    <Property Type="DateTime" Name="EntryDate" />
+    <Property Type="Int32" Name="ItemID" />
+    <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Boolean" Name="IsPersonalIncomeExpenses" />
+    <Property Type="Boolean" Name="IsExpenses" />
+    <Property Type="Boolean" Name="IsUtilities" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tbl_ExpensesMst">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsExpenses" />
+    <Property Type="Boolean" Name="IsUtilities" />
+    <Property Type="Boolean" Name="IsExtratExpenses" />
+    <Property Type="DateTime" Name="LastUpdate" />
+    <Property Type="Boolean" Name="IsActive" />
+  </EntityType>
+  <EntityType Name="Tbl_Login">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="uid" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="upwd" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="createDate" />
+    <Property Type="String" Name="uname" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="userType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tbl_Login1" Relationship="RoomManagementNewModel.FK_Tbl_Login_Tbl_Login" FromRole="Tbl_Login" ToRole="Tbl_Login1" />
+    <NavigationProperty Name="Tbl_Login2" Relationship="RoomManagementNewModel.FK_Tbl_Login_Tbl_Login" FromRole="Tbl_Login1" ToRole="Tbl_Login" />
+  </EntityType>
+  <Association Name="FK_Tbl_Login_Tbl_Login">
+    <End Type="RoomManagementNewModel.Tbl_Login" Role="Tbl_Login" Multiplicity="1" />
+    <End Type="RoomManagementNewModel.Tbl_Login" Role="Tbl_Login1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Login">
+        <PropertyRef Name="rowID" />
+      </Principal>
+      <Dependent Role="Tbl_Login1">
+        <PropertyRef Name="rowID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Tbl_PersonDetailsEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FatherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MotherName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Qualification" />
+    <Property Type="Int32" Name="Profession" />
+    <Property Type="Int32" Name="MaritalStatus" />
+    <Property Type="DateTime" Name="DOB" />
+    <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="City" />
+    <Property Type="Int64" Name="ZipCode" />
+    <Property Type="Int64" Name="Country" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="DateTime" Name="LastUpdate" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="Boolean" Name="IsPersonalIncomeExpenses" />
+  </EntityType>
+  <EntityType Name="Tbl_PersonPhoto">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="PersonID" />
+    <Property Type="String" Name="PersonPhoto" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="DateTime" Name="LastUpdate" />
+  </EntityType>
+  <EntityType Name="Tbl_PersonalIncomeExpensesEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int32" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PersonID" />
+    <Property Type="Int32" Name="ItemID" />
+    <Property Type="Double" Name="Amount" />
+    <Property Type="DateTime" Name="EntryDate" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LastUpdate" />
+  </EntityType>
+  <EntityType Name="Tbl_DailyMarketEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PersonName" Nullable="false" />
+    <Property Type="Double" Name="TotalMarket" />
+    <Property Type="DateTime" Name="EntryDate" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LastUpdate" />
+  </EntityType>
+  <EntityType Name="Tbl_DailyMealEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PersonID" />
+    <Property Type="Double" Name="MealNo" />
+    <Property Type="DateTime" Name="EntryDate" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LastUpdate" />
+  </EntityType>
+  <EntityType Name="Qry_DailyMarketEntry">
+    <Key>
+      <PropertyRef Name="PersonName" />
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Double" Name="TotalMarket" />
+    <Property Type="DateTime" Name="EntryDate" />
+    <Property Type="Int32" Name="PersonName" Nullable="false" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="rowID" Nullable="false" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Qry_DailyMealEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int32" Name="PersonID" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="MealNo" />
+    <Property Type="DateTime" Name="EntryDate" />
+    <Property Type="Int64" Name="rowID" Nullable="false" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Tbl_ExtraExpensesDtlsEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PersonName" />
+    <Property Type="Int64" Name="expID" />
+    <Property Type="Int64" Name="expAmt" />
+    <Property Type="DateTime" Name="entryDate" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LastUpdate" />
+  </EntityType>
+  <EntityType Name="Qry_ExtraExpensesDtlsEntry">
+    <Key>
+      <PropertyRef Name="rowID" />
+      <PropertyRef Name="ExtraDetailRowID" />
+    </Key>
+    <Property Type="Int64" Name="rowID" Nullable="false" />
+    <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="entryDate" />
+    <Property Type="Int64" Name="expAmt" />
+    <Property Type="Int64" Name="ExtraDetailRowID" Nullable="false" />
+    <Property Type="Boolean" Name="IsExpenses" />
+    <Property Type="Boolean" Name="IsUtilities" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsExtratExpenses" />
+    <Property Type="Int64" Name="expID" />
+    <Property Type="Int32" Name="PersonName" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_DepositMaster">
+    <Key>
+      <PropertyRef Name="rowID" />
+    </Key>
+    <Property Type="Int64" Name="rowID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TotalYear" />
+    <Property Type="DateTime" Name="CreateDate" />
+    <Property Type="Boolean" Name="IsActive" />
+    <Property Type="String" Name="Identification" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="ItemNo" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
