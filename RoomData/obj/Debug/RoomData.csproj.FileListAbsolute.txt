@@ -16,3 +16,9 @@ E:\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.pdb
 E:\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.csprojResolveAssemblyReference.cache
 E:\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.dll
 E:\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.pdb
+H:\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.dll.config
+H:\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.dll
+H:\RoomManagementEntityFramework\RoomData\bin\Debug\RoomData.pdb
+H:\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.csprojResolveAssemblyReference.cache
+H:\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.dll
+H:\RoomManagementEntityFramework\RoomData\obj\Debug\RoomData.pdb

@@ -373,6 +373,8 @@ namespace RoomManagementEntityFramework
                 {
                   remainingMonth = totalMonth - lstDepositDetailsEntryList.Count;
                   textBoxRemaining.Text = (remainingMonth/12).ToString();
+
+                  textBoxTotalAmount.Text =Convert.ToString( lstDepositDetailsEntryList.Sum(x => x.Amount) );
                 }
                 //for SonchoyPotro Part....
                 if (lstDepositMasterList[0].Identification == "S")
